@@ -11,12 +11,13 @@ int main(){
 	for(i=0; i<n; i++){
 		cin>> arr[i];
 	}
+//	delete arr;                        
 	for(i=0; i<n; i++){
 		tot+=arr[i];
 	}
 	avg= static_cast<float>(tot)/n;
-	cout<< "Total = "<< tot<< endl;
+	cout<< "Total = "<< tot<< endl;    //Throws garbage value when, delete operator is used for the array before calculating total and average
 	cout<< "Average = "<< avg;
-	delete arr;
+	delete arr;                        //Hence, delete operator should be used only after the use of the variable is over
 	return 0;
 }
