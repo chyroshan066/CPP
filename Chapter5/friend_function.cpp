@@ -4,7 +4,7 @@ using namespace std;
 class complex{
     private:
         float real, imag;
-        friend complex add(complex, complex);
+        friend complex add(complex, complex);          //Can be declared in private as well as public section
     public:
         void getValue(){
             cout<< endl<< "Enter real part: ";
@@ -15,6 +15,7 @@ class complex{
         void showValue(){
             cout<< "("<< real<< ","<< imag<< ")";
         }
+        // friend complex add(complex, complex);        //Can be declared in private as well as public section
 };
 
 complex add(complex cc1, complex cc2){

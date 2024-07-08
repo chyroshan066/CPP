@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-class second;                   //class declartaion
+class second;  //declared so that the object second passed as argument in friend function inside class first knows that there exists another class second and doesn't throw error
 class first{
     private:
         int data1;
@@ -9,7 +9,7 @@ class first{
         first(int x){
             data1 = x;
         }
-        friend int sum(first a, second b);
+        friend int sum(first a, second b);     //is not a member of class but has access to private data members
 };
 
 class second{
@@ -19,7 +19,7 @@ class second{
         second(int x){
             data2 = x;
         }
-        friend int sum(first a, second b);
+        friend int sum(first a, second b);     //is not a member of class but has access to private data members
 };
 
 int sum(first a, second b){
