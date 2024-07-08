@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-class B;
+class B;                                      //Forward declaration
 
 class A{
     private:
