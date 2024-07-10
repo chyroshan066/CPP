@@ -12,6 +12,8 @@ class A{
             cin>> data1;
         }
         friend int add(A, B);
+        friend int diff(A, B);
+        friend int prod(A, B);
 };
 
 class B{
@@ -23,10 +25,20 @@ class B{
             cin>> data2;
         }
         friend int add(A, B);
+        friend int diff(A, B);
+        friend int prod(A, B);
 };
 
 int add(A a, B b){
     return (a.data1 + b.data2);
+}
+
+int diff(A a, B b){
+    return (a.data1 - b.data2);
+}
+
+int prod(A a, B b){
+    return (a.data1 * b.data2);
 }
 
 int main(){
@@ -34,6 +46,8 @@ int main(){
     B b;
     a.setData();
     b.setData();
-    cout<< "After adding, the value is "<< add(a, b);
+    cout<< "After adding, the value is "<< add(a, b)<< endl;
+    cout<< "After subtracting, the value is "<< diff(a, b)<< endl;
+    cout<< "After multiplying, the value is "<< prod(a, b)<< endl;
     return 0;
 }
