@@ -21,7 +21,7 @@ int main(){
     Celsius cel;                                                         //User-Defined data type
     float fer;                                                           //Basic data type
     cel.getTemper();
-    fer = cel;                                                            //Conversion from Celsius data type to float
+    fer = cel;                                                            //Equivalent to float(cel)
     cout<< "Temperature in Fahrenheit measurement: "<< fer; 
     return 0;
 }
