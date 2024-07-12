@@ -9,7 +9,7 @@ class CPoint{
     public:
         CPoint(){}
         CPoint(int a, int b): x(a), y(b){}
-        void *operator new(size_t size);   //size_t is an unsigned integer type, used to store size of objects in memory
+        void *operator new(size_t size);   //size_t is an unsigned integer type, used to store size of objects in memory. It holds the largest single integer value available
         void *operator new[](size_t size);
         void operator delete(void *ptr);
         void operator delete[](void *ptr);
