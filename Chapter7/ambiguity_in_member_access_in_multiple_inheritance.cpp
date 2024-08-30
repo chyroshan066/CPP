@@ -18,7 +18,7 @@ class BaseTwo{
 class Derived: public BaseOne, public BaseTwo{
     public:
         void drvdisplay(){
-            // display();  //error: ambiguous
+            //display();  //error: ambiguous
             BaseOne::display();  //valid
             BaseTwo::display();  //valid
         }
@@ -27,7 +27,7 @@ class Derived: public BaseOne, public BaseTwo{
 int main()
 {
     Derived Der;
-    // Der.display();  //error: ambiguous
+    //Der.display();  //error: ambiguous, but if the derived class has the same function name as that common in both base class then the ambiguity is resolved since the function from base classes are hidden and the function of the derived class is called 
     Der.BaseOne::display();  //valid
     Der.BaseTwo::display();  //valid
     return 0;
