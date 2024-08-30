@@ -9,7 +9,7 @@ class complex{
         complex(float re): real(re), imag(0){}
         complex(float re, float im): real(re), imag(im){}
 
-        complex operator +(const complex& cc) const{
+        complex operator +(complex cc){
             float rr = real + cc.real;
             float ri = imag + cc.imag;
             return complex(rr, ri);
@@ -21,15 +21,13 @@ class complex{
 };
 
 class dcomplex: public complex{
-    protected:
-        float real, imag;
     public:
         dcomplex(){}
         dcomplex(float re): complex(re){}
         dcomplex(float re, float im): complex(re, im){}
         dcomplex(complex cc): complex(cc){}   //For conversion from complex to dcomplex
 
-        dcomplex operator -(const dcomplex& dd) const{
+        dcomplex operator -(dcomplex dd){
             float rr = real - dd.real;
             float ri = imag - dd.imag;
             return dcomplex(rr, ri);
