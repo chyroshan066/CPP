@@ -3,6 +3,9 @@
         "cmath": "cpp",
         "iostream": "cpp",
         "ostream": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "xutility": "cpp"
     }
 }
