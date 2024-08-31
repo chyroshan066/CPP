@@ -20,9 +20,6 @@ class Dog: public Animal{
         void display(){
             cout<< "From derived class Dog"<< endl;
         }
-        void show(){
-            cout<< "From derived class Dog using show function"<< endl;
-        }
 };
 
 int main()
@@ -39,7 +36,7 @@ int main()
     panm -> display();
 
     panm = &dg;
-    panm -> show();
+    panm -> display();
 
     return 0;
 }
